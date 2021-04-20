@@ -30,6 +30,11 @@
 		BF87A8D126151D7000DF5637 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF87A8D026151D7000DF5637 /* CustomTextField.swift */; };
 		BF87A8D426160BC800DF5637 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF87A8D326160BC800DF5637 /* CustomButton.swift */; };
 		BF87A8D726166B4F00DF5637 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF87A8D626166B4F00DF5637 /* LoginViewModel.swift */; };
+		BFCE67F2262E444200A43FFB /* CustomInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE67F1262E444200A43FFB /* CustomInputAccessoryView.swift */; };
+		BFCE67F5262E57F200A43FFB /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE67F4262E57F200A43FFB /* MessageCell.swift */; };
+		BFCE67F8262E60C900A43FFB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE67F7262E60C900A43FFB /* Message.swift */; };
+		BFCE67FB262E644E00A43FFB /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE67FA262E644E00A43FFB /* MessageViewModel.swift */; };
+		BFCE67FE262E7D2C00A43FFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE67FD262E7D2C00A43FFB /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		BF87A8D026151D7000DF5637 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BF87A8D326160BC800DF5637 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		BF87A8D626166B4F00DF5637 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		BFCE67F1262E444200A43FFB /* CustomInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputAccessoryView.swift; sourceTree = "<group>"; };
+		BFCE67F4262E57F200A43FFB /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		BFCE67F7262E60C900A43FFB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		BFCE67FA262E644E00A43FFB /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		BFCE67FD262E7D2C00A43FFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				BF87A8CA2613C9F900DF5637 /* Extensions.swift */,
+				BFCE67FD262E7D2C00A43FFB /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -163,6 +174,7 @@
 			children = (
 				BF87A8D626166B4F00DF5637 /* LoginViewModel.swift */,
 				BF4011F4261B973D00B19430 /* RegistrationViewModel.swift */,
+				BFCE67FA262E644E00A43FFB /* MessageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -174,6 +186,8 @@
 				BF87A8D026151D7000DF5637 /* CustomTextField.swift */,
 				BF87A8D326160BC800DF5637 /* CustomButton.swift */,
 				BF4013812628587F00B19430 /* UserCell.swift */,
+				BFCE67F1262E444200A43FFB /* CustomInputAccessoryView.swift */,
+				BFCE67F4262E57F200A43FFB /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				BF40138426286BC600B19430 /* User.swift */,
+				BFCE67F7262E60C900A43FFB /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,17 +325,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFCE67FB262E644E00A43FFB /* MessageViewModel.swift in Sources */,
 				BF87A8A82613AE3400DF5637 /* ViewController.swift in Sources */,
+				BFCE67F5262E57F200A43FFB /* MessageCell.swift in Sources */,
 				BF4011F5261B973D00B19430 /* RegistrationViewModel.swift in Sources */,
 				BF87A8CE261515A100DF5637 /* InputContainerView.swift in Sources */,
 				BF87A8D726166B4F00DF5637 /* LoginViewModel.swift in Sources */,
+				BFCE67FE262E7D2C00A43FFB /* Constants.swift in Sources */,
 				BF40138526286BC600B19430 /* User.swift in Sources */,
+				BFCE67F8262E60C900A43FFB /* Message.swift in Sources */,
 				BF40137F2628533900B19430 /* NewMessageController.swift in Sources */,
 				BF87A8A42613AE3400DF5637 /* AppDelegate.swift in Sources */,
 				BF87A8BF2613B18D00DF5637 /* ConversationsController.swift in Sources */,
 				BF40137C26266E5400B19430 /* AuthService.swift in Sources */,
 				BF4013822628587F00B19430 /* UserCell.swift in Sources */,
 				BF87A8D426160BC800DF5637 /* CustomButton.swift in Sources */,
+				BFCE67F2262E444200A43FFB /* CustomInputAccessoryView.swift in Sources */,
 				BF40138826286C5100B19430 /* Service.swift in Sources */,
 				BF87A8A62613AE3400DF5637 /* SceneDelegate.swift in Sources */,
 				BF87A8C82613C68500DF5637 /* RegistrationController.swift in Sources */,
