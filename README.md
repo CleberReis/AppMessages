@@ -8,7 +8,7 @@
 
 ---
 ### Bibliotecas:
-- `Firebase` Autorização.
+- `Firebase` Autenticação e envio de mensagens.
 - `SDWebImage` Carregamento de imagens.
 
 ---
