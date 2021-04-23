@@ -39,6 +39,9 @@
 		BFCE6804262F9D6900A43FFB /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE6803262F9D6900A43FFB /* ConversationViewModel.swift */; };
 		BFCE6807262F9F9300A43FFB /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE6806262F9F9300A43FFB /* ProfileController.swift */; };
 		BFCE680A262FA0A300A43FFB /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE6809262FA0A300A43FFB /* ProfileHeader.swift */; };
+		BFCE680D2632219E00A43FFB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE680C2632219E00A43FFB /* ProfileViewModel.swift */; };
+		BFCE68102632238C00A43FFB /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE680F2632238C00A43FFB /* ProfileCell.swift */; };
+		BFCE6813263229A600A43FFB /* ProfileFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE6812263229A600A43FFB /* ProfileFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,9 @@
 		BFCE6803262F9D6900A43FFB /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
 		BFCE6806262F9F9300A43FFB /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		BFCE6809262FA0A300A43FFB /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		BFCE680C2632219E00A43FFB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		BFCE680F2632238C00A43FFB /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		BFCE6812263229A600A43FFB /* ProfileFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +191,7 @@
 				BF4011F4261B973D00B19430 /* RegistrationViewModel.swift */,
 				BFCE67FA262E644E00A43FFB /* MessageViewModel.swift */,
 				BFCE6803262F9D6900A43FFB /* ConversationViewModel.swift */,
+				BFCE680C2632219E00A43FFB /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -200,6 +207,8 @@
 				BFCE67F4262E57F200A43FFB /* MessageCell.swift */,
 				BFCE6800262F98C800A43FFB /* ConversationCell.swift */,
 				BFCE6809262FA0A300A43FFB /* ProfileHeader.swift */,
+				BFCE680F2632238C00A43FFB /* ProfileCell.swift */,
+				BFCE6812263229A600A43FFB /* ProfileFooter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +352,7 @@
 				BF4011F5261B973D00B19430 /* RegistrationViewModel.swift in Sources */,
 				BF87A8CE261515A100DF5637 /* InputContainerView.swift in Sources */,
 				BFCE6807262F9F9300A43FFB /* ProfileController.swift in Sources */,
+				BFCE680D2632219E00A43FFB /* ProfileViewModel.swift in Sources */,
 				BFCE6804262F9D6900A43FFB /* ConversationViewModel.swift in Sources */,
 				BF87A8D726166B4F00DF5637 /* LoginViewModel.swift in Sources */,
 				BFCE67FE262E7D2C00A43FFB /* Constants.swift in Sources */,
@@ -352,6 +362,7 @@
 				BF87A8A42613AE3400DF5637 /* AppDelegate.swift in Sources */,
 				BF87A8BF2613B18D00DF5637 /* ConversationsController.swift in Sources */,
 				BF40137C26266E5400B19430 /* AuthService.swift in Sources */,
+				BFCE6813263229A600A43FFB /* ProfileFooter.swift in Sources */,
 				BF4013822628587F00B19430 /* UserCell.swift in Sources */,
 				BF87A8D426160BC800DF5637 /* CustomButton.swift in Sources */,
 				BFCE67F2262E444200A43FFB /* CustomInputAccessoryView.swift in Sources */,
@@ -363,6 +374,7 @@
 				BF87A8CB2613C9F900DF5637 /* Extensions.swift in Sources */,
 				BF87A8D126151D7000DF5637 /* CustomTextField.swift in Sources */,
 				BF4013A42628A31100B19430 /* ChatController.swift in Sources */,
+				BFCE68102632238C00A43FFB /* ProfileCell.swift in Sources */,
 				BFCE680A262FA0A300A43FFB /* ProfileHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

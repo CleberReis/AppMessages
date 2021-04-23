@@ -14,6 +14,7 @@ class ConversationsController: UIViewController {
     private let tableView = UITableView()
     private let reuseIdentifier = "ConversationCell"
     private var conversations = [Conversation]()
+    private var conversartionDictionary = [String: Conversation]()
     
     private let newMessageButton: UIButton = {
         let button = UIButton(type: .system)
@@ -41,7 +42,8 @@ class ConversationsController: UIViewController {
     
     //MARK: - Selectors
     @objc func showProfile() {
-        let controller = ProfileController()
+        let controller = ProfileController(style: .insetGrouped)
+        controller.delegate = self
         let nav = UINavigationController(rootViewController: controller)
         nav.modalPresentationStyle  = .fullScreen
         present(nav, animated: true, completion: nil)
@@ -57,18 +59,21 @@ class ConversationsController: UIViewController {
     
     // MARK: - API
     func fetchConversations() {
+        showLoader(true)
         Service.fetchConversations { conversations in
-            self.conversations = conversations
+            conversations.forEach { conversation in
+                let message = conversation.message
+                self.conversartionDictionary[message.chatPartnerID] = conversation
+            }
+            self.showLoader(false)
+            self.conversations = Array(self.conversartionDictionary.values)
             self.tableView.reloadData()
         }
     }
     
     func authenticateUser() {
         if Auth.auth().currentUser?.uid == nil {
-            print("DEBUG: User is not logged in. Present login screen here...")
             presentLoginScreen()
-        } else {
-            print("DEBUG: User is \(Auth.auth().currentUser?.uid)")
         }
     }
     
@@ -85,6 +90,7 @@ class ConversationsController: UIViewController {
     func presentLoginScreen() {
         DispatchQueue.main.async {
             let controller = LoginController()
+            controller.delegate = self
             let nav = UINavigationController(rootViewController: controller)
             nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: true, completion: nil)
@@ -159,7 +165,22 @@ extension ConversationsController: UITableViewDelegate {
 // MARK: - NewMessageControllerDelegate
 extension ConversationsController: NewMessageControllerDelegate {
     func controller(_ controller: NewMessageController, wantsToStartChatWith user: User) {
-        controller.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
         showChatController(forUser: user)
+    }
+}
+
+// MARK: - ProfileControllerDelegate
+extension ConversationsController: ProfileControllerDelegate {
+    func handleLogout() {
+        logout()
+    }
+}
+
+extension ConversationsController: AuthenticationDelegate {
+    func authenticationComplete() {
+        dismiss(animated: true, completion: nil)
+        configureUI()
+        fetchConversations()
     }
 }

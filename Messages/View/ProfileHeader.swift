@@ -7,14 +7,17 @@
 
 import UIKit
 
-protocol ProfileHeaderdelegate: class {
+protocol ProfileHeaderDelegate: class {
     func dismissController()
 }
 
 class ProfileHeader: UIView {
     
     // MARK: - Properties
-    weak var delegate: ProfileHeaderdelegate?
+    var user: User? {
+        didSet { populateUserData() }
+    }
+    weak var delegate: ProfileHeaderDelegate?
     let gradient = CAGradientLayer()
     
     private let dismissButton: UIButton = {
@@ -73,6 +76,14 @@ class ProfileHeader: UIView {
     }
     
     // MARK: - Helpers
+    func populateUserData() {
+        guard let user = user else { return }
+        fullnameLabel.text = user.fullname
+        usernameLabel.text = "@" + user.username
+        guard let url = URL(string: user.profileImageUrl) else { return }
+        profileImageView.sd_setImage(with: url)
+    }
+    
     func configureUI() {
         configureGradientLayer()
         
